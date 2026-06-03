@@ -1,29 +1,53 @@
-/* Custom variables for explicit theme matching */
+/* Color Palette Variables Formulation */
 :root {
-    --card-radius: 12px;
-    --transition-speed: 0.3s;
+    --primary-glow: #533AFA;
+    --accent-orange: #FF7A00;
+    --background-gray: #F5F6FC;
 }
 
-body {
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+/* Global Typography Override for a Friendlier Visual Presentation */
+body, button, input, select, textarea {
+    font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+    font-weight: 600; /* Medium-bold base weight characteristic of friendly interfaces */
 }
 
-/* Base custom chart card configuration */
+body.bg-light-custom {
+    background-color: var(--background-gray);
+}
+
+/* Customized Branding Topbar */
+.navbar-custom {
+    background-color: var(--primary-glow);
+}
+
+/* Main Establishment Visual Accent Box */
+.profile-card {
+    background: linear-gradient(135deg, var(--primary-glow) 0%, #7661FB 100%);
+    border-radius: 16px;
+}
+
+.badge-orange {
+    background-color: var(--accent-orange);
+    color: white;
+    font-weight: 700;
+}
+
+/* Core Dashboard Content Containers and Interactive Glowing Elements */
 .chart-card {
-    border-radius: var(--card-radius);
-    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
-    background-color: #ffffff;
+    border-radius: 16px;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease-in-out;
 }
 
-/* Minor hovering interactive feedback effect for dashboard design elements */
+/* Trigger Dynamic Luminescent Glow Responses on Pointer Focus */
 .chart-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(83, 58, 250, 0.25) !important;
+    outline: 2px solid rgba(83, 58, 250, 0.4);
 }
 
-/* Chart Canvas Wrapper constraint to ensure smooth Chart.js responsive redrawing mechanics */
-.chart-container {
+/* Isolated Fixed Sizing Controls for Chart Rendering Canvas Boxes */
+.chart-wrapper {
     position: relative;
     width: 100%;
-    height: 280px; /* Forces uniform canvas base heights across desktop grids */
+    height: 300px;
 }
