@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Establishment Analytics Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-light">
+
+    <div class="container my-5">
+        <header class="mb-4 pb-3 border-bottom">
+            <h1 class="h2 text-dark fw-bold">Establishment Profile Analytics</h1>
+            <p class="text-muted mb-0">Internal Inspector Portal &bull; Analytics Tracking for: <strong class="text-primary">Gourmet Kitchen Hub (Lic #FS-99281)</strong></p>
+            <div class="mt-2">
+                <span class="badge bg-danger">Last Inspected: May 28, 2026</span>
+                <span class="badge bg-warning text-dark">Current Status: Under Review</span>
+            </div>
+        </header>
+
+        <div class="row g-4">
+            
+            <div class="col-lg-4 col-md-12">
+                <div class="card chart-card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                        <h5 class="card-title fw-semibold text-secondary">Traffic vs. Violations</h5>
+                        <p class="small text-muted mb-3">Monthly page views mapped against logged health violations.</p>
+                        <div class="chart-container">
+                            <canvas id="trafficViolationsChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12">
+                <div class="card chart-card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                        <h5 class="card-title fw-semibold text-secondary">Consumer Complaints Status</h5>
+                        <p class="small text-muted mb-3">Current breakdown of public-submitted violation reports.</p>
+                        <div class="chart-container">
+                            <canvas id="complaintsStatusChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12">
+                <div class="card chart-card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                        <h5 class="card-title fw-semibold text-secondary">Violation History Breakdown</h5>
+                        <p class="small text-muted mb-3">Frequency of specific health code infractions caught during audits.</p>
+                        <div class="chart-container">
+                            <canvas id="frequentViolationsChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
